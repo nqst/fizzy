@@ -106,9 +106,4 @@
       display: none;
     }
   }
-
-  .notifications__status {
-    --panel-border-radius: 0.5em;
-    --panel-padding: var(--block-space);
-  }
 }

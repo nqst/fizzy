@@ -1,17 +1,19 @@
 @layer components {
   .panel {
+    --panel-border-radius: 1em;
+    --panel-padding: var(--block-space);
+
     background-color: var(--panel-bg, var(--color-canvas));
     border: var(--panel-border-size, 1px) solid var(--panel-border-color, var(--color-ink-lighter));
-    border-radius: var(--panel-border-radius, 1em);
+    border-radius: var(--panel-border-radius);
     color: var(--color-ink);
     inline-size: var(--panel-size, 60ch);
     max-inline-size: 100%;
-    padding: var(--panel-padding, var(--block-space));
+    padding: var(--panel-padding);
 
     @media (min-width: 640px) {
+      --panel-padding: var(--block-space-double);
       --panel-size: 100%;
-
-      padding: var(--panel-padding, var(--block-space-double));
     }
   }
 
@@ -32,5 +34,12 @@
       justify-content: center;
       margin: auto;
     }
+  }
+
+  .panel--inner {
+    --panel-inner-border-radius: max(calc(var(--panel-border-radius) - var(--panel-padding)), 0.5em);
+    --panel-padding: var(--block-space);
+
+    border-radius: var(--panel-inner-border-radius);
   }
 }
