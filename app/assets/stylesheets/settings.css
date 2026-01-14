@@ -24,7 +24,7 @@
     min-inline-size: 0;
 
     @media (min-width: 960px) {
-      --panel-padding: calc(var(--settings-spacer) * 1.5) calc(var(--settings-spacer) * 2);
+      --panel-padding: calc(var(--settings-spacer) * 1.5) calc(var(--settings-spacer) * 1.75);
     }
   }
 
